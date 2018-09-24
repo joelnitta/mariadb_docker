@@ -8,5 +8,3 @@ RUN apt-get update \
 		mysql-server \
 	&& apt-get clean \
 	&& install2.r -e DBI RMariaDB
-
-CMD service mysql start && tail -F /var/log/mysql/error.log
