@@ -9,4 +9,4 @@ RUN apt-get update \
 	&& apt-get clean \
 	&& install2.r -e DBI RMariaDB
 
-ENTRYPOINT service mysql start
+CMD service mysql start && tail -F /var/log/mysql/error.log
